@@ -1,5 +1,6 @@
 import sys
 import logging
+import urllib.parse
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -92,15 +93,72 @@ if st.button("Get Recommendation", type="primary"):
         col1.metric("Confidence", label, help="How clearly the top match stands out from alternatives")
         col2.caption(f"_{detail}_")
 
-        with st.spinner("Asking Claude for a recommendation..."):
+        # --- AI recommendation ---
+        recommended_song = None
+        with st.spinner("Getting AI recommendation..."):
             try:
                 response = generate_recommendation(query, retrieved)
                 st.subheader("Recommendation")
                 st.markdown(response)
                 logger.info(f"Recommendation served for query: '{query[:60]}'")
-            except ValueError as e:
-                st.error(str(e))
-                logger.error(f"Validation error: {e}")
+                response_lower = response.lower()
+                earliest_pos = len(response_lower)
+                for song, _ in retrieved:
+                    pos = response_lower.find(song["title"].lower())
+                    if pos != -1 and pos < earliest_pos:
+                        earliest_pos = pos
+                        recommended_song = song
             except Exception as e:
-                st.error("Something went wrong. Check that your ANTHROPIC_API_KEY is set in .env and try again.")
+                st.info("AI unavailable — showing top semantic match.")
                 logger.error(f"Recommendation failed: {e}", exc_info=True)
+
+        # --- YouTube autoplay for recommended song ---
+        play_song = recommended_song or retrieved[0][0]
+        youtube_id = play_song.get("youtube_id", "").strip()
+
+        st.divider()
+        st.markdown("#### 🎵 Now Playing")
+        st.caption(
+            f"**{play_song['title']}** by {play_song['artist']} "
+            f"· {play_song['genre'].title()} · {play_song['mood']}"
+        )
+
+        if youtube_id:
+            st.components.v1.html(f"""
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <style>
+                body {{ margin: 0; padding: 0; background: #000; }}
+                #player {{ width: 100%; height: 200px; }}
+              </style>
+            </head>
+            <body>
+              <div id="player"></div>
+              <script>
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                document.head.appendChild(tag);
+
+                function onYouTubeIframeAPIReady() {{
+                  new YT.Player('player', {{
+                    videoId: '{youtube_id}',
+                    playerVars: {{
+                      autoplay: 1,
+                      mute: 1,
+                      playsinline: 1,
+                      rel: 0
+                    }},
+                    events: {{
+                      onReady: function(e) {{ e.target.playVideo(); }}
+                    }}
+                  }});
+                }}
+              </script>
+            </body>
+            </html>
+            """, height=210)
+            st.link_button("Open in YouTube ↗", f"https://www.youtube.com/watch?v={youtube_id}")
+        else:
+            watch_url = f"https://www.youtube.com/results?search_query={urllib.parse.quote_plus(play_song['title'] + ' ' + play_song['genre'])}"
+            st.link_button("🔍 Find on YouTube", watch_url)

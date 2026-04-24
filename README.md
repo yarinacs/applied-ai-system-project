@@ -246,3 +246,15 @@ Building this project changed how I think about what "adding AI" actually means.
 The most important thing I learned is that **generation is only as good as retrieval**. When Claude was given the right songs, its explanations were specific, accurate, and genuinely useful. When the query was vague and the retrieval pulled in loosely-related songs, the recommendation was weaker — not because Claude failed, but because the context it received was ambiguous. This is why RAG systems invest heavily in retrieval quality, not just the language model.
 
 I also learned that reliability and transparency matter as much as correctness. Showing the user *which songs were retrieved* and *how confident the system is* turns a black-box recommendation into something explainable and trustworthy. That shift — from "here's your answer" to "here's how I got there" — feels like the most important design principle I'll carry forward.
+
+---
+
+## Portfolio
+
+**GitHub:** https://github.com/yarinacs/applied-ai-system-project
+
+### What this project says about me as an AI engineer
+
+This project shows that I care about building AI systems that are honest about what they're doing. I didn't just connect a language model to an input box — I built a retrieval layer that grounds every recommendation in real data, added a confidence score that tells users when the system is uncertain, and made the intermediate steps visible in the UI so anyone can see exactly what the AI was given before it answered. I also built the system to survive real-world failure: when the primary API ran out of credits mid-project, I added a Gemini fallback so the app kept working. Throughout this project I was consistently drawn to the questions around transparency and reliability — not just "does the AI answer?" but "does the user understand why, and can they trust it?" That instinct is what I want to bring to every AI system I build.
+
+---

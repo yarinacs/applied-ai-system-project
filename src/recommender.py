@@ -36,6 +36,7 @@ def load_songs(csv_path: str) -> List[Dict]:
                 "valence":      float(row["valence"]),
                 "danceability": float(row["danceability"]),
                 "acousticness": float(row["acousticness"]),
+                "youtube_id":   row.get("youtube_id", "").strip(),
             })
     logger.info(f"Loaded {len(songs)} songs from {csv_path}")
     return songs

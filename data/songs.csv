@@ -1,19 +1,19 @@
-id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
-1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18
-2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71
-3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10
-4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86
-5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05
-6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92
-7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89
-8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
-9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
-10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
-11,Crown the Block,MC Velvet,hip-hop,confident,0.78,94,0.72,0.85,0.12
-12,Autumn Sonata No. 3,Clara Voss,classical,melancholic,0.22,58,0.28,0.25,0.97
-13,Velvet Hours,Soleil Jones,r&b,romantic,0.55,88,0.74,0.77,0.38
-14,Iron Collapse,Shatterglass,metal,angry,0.97,168,0.22,0.45,0.04
-15,Old Porch Hymn,River Dust,folk,nostalgic,0.31,76,0.61,0.48,0.94
-16,Harbor Breeze,Coastal Roots,reggae,peaceful,0.48,82,0.83,0.80,0.55
-17,Pulse Horizon,Wavecraft,edm,euphoric,0.95,140,0.88,0.92,0.03
-18,Empty Glass,Dara Bell,soul,sad,0.38,68,0.21,0.43,0.72
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness,youtube_id
+1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18,rYr1OPsnGCE
+2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71,WH0lsTxcw4w
+3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10,lZMidtI6h8s
+4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86,sF80I-TQiW0
+5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05,EwUvwI_kyq4
+6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92,NfMK0Ssamz0
+7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89,MYPVQccHhAQ
+8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22,eGB4ZbGSw28
+9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78,IgWaKU0Fytc
+10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35,vGgb418ex_M
+11,Crown the Block,MC Velvet,hip-hop,confident,0.78,94,0.72,0.85,0.12,eL1L287YbkQ
+12,Autumn Sonata No. 3,Clara Voss,classical,melancholic,0.22,58,0.28,0.25,0.97,63hGbDgFvS0
+13,Velvet Hours,Soleil Jones,r&b,romantic,0.55,88,0.74,0.77,0.38,Rx_T8yHrZCs
+14,Iron Collapse,Shatterglass,metal,angry,0.97,168,0.22,0.45,0.04,WhTpJuR2ICA
+15,Old Porch Hymn,River Dust,folk,nostalgic,0.31,76,0.61,0.48,0.94,e0iXfnyAZhs
+16,Harbor Breeze,Coastal Roots,reggae,peaceful,0.48,82,0.83,0.80,0.55,J1AzSKMJBlQ
+17,Pulse Horizon,Wavecraft,edm,euphoric,0.95,140,0.88,0.92,0.03,Q9ZLZOC2PXE
+18,Empty Glass,Dara Bell,soul,sad,0.38,68,0.21,0.43,0.72,qP-htxI9DFo
