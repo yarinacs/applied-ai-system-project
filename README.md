@@ -69,7 +69,9 @@ User Query (natural language)
 | `tests/` | 12 pytest tests covering scoring and reliability |
 | `logs/app.log` | Auto-generated interaction log |
 
-The diagram image is in [`assets/system_diagram.png`](assets/system_diagram.png).
+The diagram image is in [`assets/mermaid_diagram.jpg`](assets/mermaid_diagram.jpg).
+
+![System Architecture](assets/mermaid_diagram.jpg)
 
 ---
 
