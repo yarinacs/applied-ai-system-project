@@ -13,7 +13,7 @@
 > [Your Name]
 
 **Speaker script (30 sec):**
-> "Hi everyone — I'm going to show you VibeMatch AI, a music recommendation system I built for this class. The idea is simple: instead of filling out a structured form to get a song suggestion, you just describe your mood in plain English, and the system finds your perfect match. Under the hood it uses a technique called RAG — Retrieval-Augmented Generation — plus Claude Sonnet, Anthropic's AI. Let me walk you through how it works and then show you a live demo."
+> "Hi everyone — I'm going to show you VibeMatch AI, a music recommendation system I built for this class. The idea is simple: instead of filling out a structured form to get a song suggestion, you just describe your mood in plain English, and the system finds your perfect match. Under the hood it uses a technique called RAG plus Claude. Let me walk you through how it works and then show you a live demo."
 
 ---
 

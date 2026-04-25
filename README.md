@@ -254,6 +254,7 @@ I also learned that reliability and transparency matter as much as correctness. 
 ## Portfolio
 
 **GitHub:** https://github.com/yarinacs/applied-ai-system-project
+**Loom:** https://www.loom.com/share/dc73074d694f40cc9b363310ff1eabe4
 
 ### What this project says about me as an AI engineer
 
